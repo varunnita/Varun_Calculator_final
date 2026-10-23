@@ -57,7 +57,7 @@ pipeline {
                 echo 'Deploying the application...'
                 // Simulate deployment: run the calculator with a sample input
                 // to prove the application works end to end.
-                sh 'echo 1 & echo 5 & echo 3 | python calculator.py'
+                sh 'printf "1\\n5\\n3\\n" | python3 calculator.py'
                 echo '-------------------------------------------'
                 echo 'Deployment simulation complete!'
                 echo 'In a real environment, this stage would:'
